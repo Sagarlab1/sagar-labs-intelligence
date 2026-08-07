@@ -8,17 +8,18 @@ async function render(path = "/") {
   return worker.fetch(new Request(`http://localhost${path}`, { headers: { accept: "text/html" } }), { ASSETS: { fetch: async () => new Response("Not found", { status: 404 }) } }, { waitUntil() {}, passThroughOnException() {} });
 }
 
-test("renders the Sagar Intelligence shell", async () => {
+test("renders the Sagar Labs experience shell", async () => {
   const response = await render();
   assert.equal(response.status, 200);
   const html = await response.text();
-  assert.match(html, /Sagar Intelligence/);
+  assert.match(html, /Sagar Labs/);
+  assert.match(html, /Every great decision begins/);
   assert.match(html, /Humanity/);
   assert.doesNotMatch(html, /codex-preview|Your site is taking shape|Lorem ipsum/i);
 });
 
 test("renders representative routes", async () => {
-  for (const path of ["/investors", "/about", "/contact", "/intelligence/lithium-intelligence"]) {
+  for (const path of ["/how-it-works", "/decision-intelligence", "/decision-room", "/scenario-explorer", "/evidence-explorer", "/ceo-summary", "/use-cases", "/pricing", "/about", "/contact", "/client-login"]) {
     const response = await render(path);
     assert.equal(response.status, 200, path);
   }

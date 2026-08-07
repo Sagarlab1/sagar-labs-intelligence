@@ -1,6 +1,6 @@
-# Sagar Intelligence
+# Sagar Labs — Experience OS Beta
 
-Official multi-route web experience for Sagar Intelligence.
+Private beta of the bilingual enterprise experience for Sagar Labs Decision Intelligence.
 
 ## Local development
 
@@ -14,18 +14,23 @@ npm run dev
 ## Routes
 
 - `/`
-- `/intelligence/sagar-intelligence`
-- `/intelligence/data-center-intelligence`
-- `/intelligence/project-capital-intelligence`
-- `/intelligence/lithium-intelligence`
-- `/intelligence/water-intelligence`
-- `/intelligence/energy-intelligence`
-- `/intelligence/ai-agents`
-- `/intelligence/research-labs`
-- `/investors`
+- `/how-it-works`
+- `/decision-intelligence`
+- `/decision-room`
+- `/scenario-explorer`
+- `/evidence-explorer`
+- `/ceo-summary`
+- `/use-cases`
+- `/pricing`
 - `/about`
 - `/contact`
-- `/privacy`
+- `/client-login`
+
+## Beta status
+
+Current version: `0.1.0-beta.1`.
+
+Demo numbers and project examples are illustrative. No customer results, partnerships, logos, testimonials or performance claims are implied.
 
 ## Reality Mode
 
