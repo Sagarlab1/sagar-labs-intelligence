@@ -84,24 +84,28 @@ export function NovaBroomCarousel() {
             <h2>Una señal puede abrir la puerta.<br /><em>La evidencia decide si cruzarla.</em></h2>
           </div>
           <div className="story-controls" aria-label="Controles del carrusel">
-            <a className={active === 0 ? "disabled" : ""} href={active === 0 ? "#story-carousel" : `#story-slide-${String(active).padStart(2, "0")}`} onClick={(event) => { if (active === 0) { event.preventDefault(); return; } event.preventDefault(); move(-1); }} aria-label="Lámina anterior" aria-disabled={active === 0}><ArrowLeft size={16} /></a>
+            <a className={active === 0 ? "disabled" : ""} href={active === 0 ? "#story-carousel" : `#story-slide-${String(active).padStart(2, "0")}`} onClick={() => { if (active > 0) move(-1); }} aria-label="Lámina anterior" aria-disabled={active === 0}><ArrowLeft size={16} /></a>
             <span>{String(active + 1).padStart(2, "0")} / {String(slides.length).padStart(2, "0")}</span>
-            <a className={active === slides.length - 1 ? "disabled" : ""} href={active === slides.length - 1 ? "#story-carousel" : `#story-slide-${String(active + 2).padStart(2, "0")}`} onClick={(event) => { if (active === slides.length - 1) { event.preventDefault(); return; } event.preventDefault(); move(1); }} aria-label="Siguiente lámina" aria-disabled={active === slides.length - 1}><ArrowRight size={16} /></a>
+            <a className={active === slides.length - 1 ? "disabled" : ""} href={active === slides.length - 1 ? "#story-carousel" : `#story-slide-${String(active + 2).padStart(2, "0")}`} onClick={() => { if (active < slides.length - 1) move(1); }} aria-label="Siguiente lámina" aria-disabled={active === slides.length - 1}><ArrowRight size={16} /></a>
           </div>
         </div>
 
         <div className="story-carousel" id="story-carousel" ref={scroller} onScroll={updateActive} tabIndex={0} aria-label="Desliza horizontalmente para ver las siete láminas">
-          {slides.map((slide) => (
+          {slides.map((slide, index) => (
             <figure className="story-slide" id={`story-slide-${slide.number}`} key={slide.number}>
               <img src={`/story/cycle-013-carousel-nova-broom/slide-${slide.number}.png`} alt={slide.alt} />
               <figcaption><span>{slide.number} / {slide.title}</span><span>SAGAR LABS · ES</span></figcaption>
+              <nav className="story-slide-actions" aria-label={`Navegar desde lámina ${slide.number}`}>
+                {index > 0 ? <a href={`#story-slide-${String(index).padStart(2, "0")}`} onClick={() => setActive(index - 1)}><ArrowLeft size={13} /> Anterior</a> : <span />}
+                {index < slides.length - 1 ? <a href={`#story-slide-${String(index + 2).padStart(2, "0")}`} onClick={() => setActive(index + 1)}>Siguiente <ArrowRight size={13} /></a> : <span />}
+              </nav>
             </figure>
           ))}
         </div>
 
         <div className="story-dots" aria-label="Seleccionar lámina">
           {slides.map((slide, index) => (
-            <a href={`#story-slide-${slide.number}`} key={slide.number} className={index === active ? "active" : ""} onClick={(event) => { event.preventDefault(); setActive(index); const container = scroller.current; const first = container?.firstElementChild as HTMLElement | null; if (container && first) container.scrollTo({ left: index * (first.offsetWidth + 22), behavior: "smooth" }); }} aria-label={`Ir a lámina ${slide.number}`} aria-current={index === active ? "true" : undefined} />
+            <a href={`#story-slide-${slide.number}`} key={slide.number} className={index === active ? "active" : ""} onClick={() => { setActive(index); const container = scroller.current; const first = container?.firstElementChild as HTMLElement | null; if (container && first) container.scrollTo({ left: index * (first.offsetWidth + 22), behavior: "smooth" }); }} aria-label={`Ir a lámina ${slide.number}`} aria-current={index === active ? "true" : undefined} />
           ))}
         </div>
       </section>
