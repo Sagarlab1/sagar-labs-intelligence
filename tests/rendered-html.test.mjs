@@ -19,8 +19,13 @@ test("renders the Sagar Labs experience shell", async () => {
 });
 
 test("renders representative routes", async () => {
-  for (const path of ["/how-it-works", "/decision-intelligence", "/decision-room", "/scenario-explorer", "/evidence-explorer", "/ceo-summary", "/use-cases", "/pricing", "/about", "/contact", "/client-login"]) {
+  for (const path of ["/how-it-works", "/infrastructure-signal", "/nova-broom-carousel", "/decision-intelligence", "/decision-room", "/scenario-explorer", "/evidence-explorer", "/ceo-summary", "/use-cases", "/pricing", "/about", "/contact", "/client-login"]) {
     const response = await render(path);
     assert.equal(response.status, 200, path);
+    if (path === "/nova-broom-carousel") {
+      const html = await response.text();
+      assert.match(html, /Nova y Broom/);
+      assert.match(html, /slide-01\.png/);
+    }
   }
 });

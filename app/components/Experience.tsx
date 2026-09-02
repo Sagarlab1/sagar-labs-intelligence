@@ -10,6 +10,7 @@ import {
 } from "lucide-react";
 import { createContext, useContext, useEffect, useState } from "react";
 import { InfrastructureSignalPage, SignalHeroGraphic } from "./InfrastructureSignal";
+import { NovaBroomCarousel } from "./NovaBroomCarousel";
 
 type IconType = typeof Network;
 
@@ -134,6 +135,7 @@ export function Experience({ initialPath = "/" }: { initialPath?: string }) {
   let page: React.ReactNode = <Home />;
   if (path === "/how-it-works") page = <HowItWorks />;
   else if (path === "/infrastructure-signal") page = <InfrastructureSignalPage lang={lang} />;
+  else if (path === "/nova-broom-carousel") page = <NovaBroomCarousel />;
   else if (path === "/decision-intelligence") page = <DecisionIntelligencePage />;
   else if (path === "/decision-room") page = <DecisionRoomPage />;
   else if (path === "/scenario-explorer") page = <ScenarioExplorer />;
