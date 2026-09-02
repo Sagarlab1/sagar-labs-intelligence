@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1080" viewBox="0 0 1080 1080" role="img" aria-labelledby="title desc">
+  <title id="title">Sagar Infrastructure Signal: A headline is not a gate</title>
+  <desc id="desc">CYCLE_013 public-source screening: 9 public sources indexed, 0 gates satisfied, advance eligible no.</desc>
+  <rect width="1080" height="1080" fill="#071217"/>
+  <circle cx="890" cy="118" r="190" fill="#12383b" opacity=".55"/>
+  <circle cx="920" cy="90" r="105" fill="#246761" opacity=".22"/>
+  <path d="M72 205H1008M72 815H1008" stroke="#214146" stroke-width="1"/>
+  <text x="72" y="86" fill="#9cf2e4" font-family="Arial,Helvetica,sans-serif" font-size="18" font-weight="700" letter-spacing="3">SAGAR / INFRASTRUCTURE SIGNAL</text>
+  <text x="72" y="132" fill="#6f9290" font-family="Arial,Helvetica,sans-serif" font-size="15" letter-spacing="2">CYCLE_013 · PUBLIC SCREENING</text>
+  <text x="72" y="330" fill="#f5f8f6" font-family="Arial,Helvetica,sans-serif" font-size="74" font-weight="700" letter-spacing="-2">A headline</text>
+  <text x="72" y="412" fill="#f5f8f6" font-family="Arial,Helvetica,sans-serif" font-size="74" font-weight="700" letter-spacing="-2">is not a gate.</text>
+  <rect x="72" y="468" width="78" height="4" fill="#f0a15b"/>
+  <text x="72" y="533" fill="#b9cbc8" font-family="Arial,Helvetica,sans-serif" font-size="24">Public evidence can open diligence.</text>
+  <text x="72" y="570" fill="#b9cbc8" font-family="Arial,Helvetica,sans-serif" font-size="24">It cannot close the gate by itself.</text>
+  <g transform="translate(72 690)">
+    <rect width="258" height="92" fill="#0e2429" stroke="#2c9b8d"/>
+    <text x="22" y="40" fill="#f5f8f6" font-family="Arial,Helvetica,sans-serif" font-size="36" font-weight="700">9</text>
+    <text x="22" y="68" fill="#7fa4a0" font-family="Arial,Helvetica,sans-serif" font-size="12" letter-spacing="1.5">PUBLIC SOURCES</text>
+  </g>
+  <g transform="translate(348 690)">
+    <rect width="258" height="92" fill="#0e2429" stroke="#f0a15b"/>
+    <text x="22" y="40" fill="#f5f8f6" font-family="Arial,Helvetica,sans-serif" font-size="36" font-weight="700">0</text>
+    <text x="22" y="68" fill="#7fa4a0" font-family="Arial,Helvetica,sans-serif" font-size="12" letter-spacing="1.5">GATES SATISFIED</text>
+  </g>
+  <g transform="translate(624 690)">
+    <rect width="258" height="92" fill="#0e2429" stroke="#e26e5c"/>
+    <text x="22" y="40" fill="#f5f8f6" font-family="Arial,Helvetica,sans-serif" font-size="36" font-weight="700">NO</text>
+    <text x="22" y="68" fill="#7fa4a0" font-family="Arial,Helvetica,sans-serif" font-size="12" letter-spacing="1.5">ADVANCE ELIGIBLE</text>
+  </g>
+  <text x="72" y="872" fill="#9cf2e4" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="700" letter-spacing="1.5">NEXT DECISION</text>
+  <text x="72" y="906" fill="#f5f8f6" font-family="Arial,Helvetica,sans-serif" font-size="25">Request the bounded technical + regulatory data room.</text>
+  <text x="72" y="1004" fill="#6f9290" font-family="Arial,Helvetica,sans-serif" font-size="14" letter-spacing="1.2">[VERIFIED] · HUMAN REVIEW REQUIRED · SAGAR LABS</text>
+</svg>

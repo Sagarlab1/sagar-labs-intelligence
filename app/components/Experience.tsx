@@ -5,10 +5,11 @@ import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import {
   ArrowDownRight, ArrowRight, BarChart3, BrainCircuit, Check,
   ChevronRight, CircleAlert, CircleCheck, Compass, FileSearch, Filter,
-  Gauge, Globe2, Layers3, Menu, Network, Play, Radar, Search, Send,
+  Gauge, Globe2, Layers3, Menu, Network, Play, Search, Send,
   ShieldCheck, Sparkles, Sun, Target, X, Zap,
 } from "lucide-react";
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
+import { InfrastructureSignalPage, SignalHeroGraphic } from "./InfrastructureSignal";
 
 type IconType = typeof Network;
 
@@ -39,7 +40,7 @@ function BrandMark() { return <span className="brand-mark" aria-hidden="true"><i
 function Header({ theme, setTheme }: { theme: "dark" | "light"; setTheme: (value: "dark" | "light") => void }) {
   const { lang, setLang } = useLang();
   const [open, setOpen] = useState(false);
-  const links = [[tr(lang, "How It Works", "Cómo funciona"), "/how-it-works"], [tr(lang, "Decision Room", "Sala de Decisiones"), "/decision-room"], [tr(lang, "Use Cases", "Casos de uso"), "/use-cases"], [tr(lang, "Company", "Compañía"), "/about"]];
+  const links = [[tr(lang, "Infrastructure Signal", "Infrastructure Signal"), "/infrastructure-signal"], [tr(lang, "How It Works", "Cómo funciona"), "/how-it-works"], [tr(lang, "Decision Room", "Sala de Decisiones"), "/decision-room"], [tr(lang, "Use Cases", "Casos de uso"), "/use-cases"], [tr(lang, "Company", "Compañía"), "/about"]];
   return <header className="site-header">
     <a className="brand" href="/" aria-label="Sagar Labs home"><BrandMark /><span>SAGAR <b>LABS</b></span></a><span className="beta-badge">BETA</span>
     <nav className="desktop-nav" aria-label="Primary navigation">{links.map(([label, href]) => <a href={href} key={label}>{label}</a>)}</nav>
@@ -53,8 +54,6 @@ function Footer() { const { lang } = useLang(); return <footer><div className="f
 
 function Reveal({ children, className = "" }: { children: React.ReactNode; className?: string }) { const reduce = useReducedMotion(); return <motion.div className={className} initial={reduce ? false : { opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-10%" }} transition={{ duration: .7, ease: [0.22, 1, 0.36, 1] }}>{children}</motion.div>; }
 
-function Orb() { return <div className="orb-wrap"><div className="orb-orbit orb-orbit-a" /><div className="orb-orbit orb-orbit-b" /><div className="orb-core"><div className="orb-grid" /><div className="orb-point p1" /><div className="orb-point p2" /><div className="orb-point p3" /><span>01</span></div><div className="orb-label orb-label-a"><CircleCheck size={13} /><span>Evidence coverage</span><b>Illustrative</b></div><div className="orb-label orb-label-b"><Radar size={13} /><span>Decision graph</span><b>Connected</b></div></div>; }
-
 function SectionIntro({ index, eyebrow, title, text, light = false }: { index: string; eyebrow: string; title: React.ReactNode; text?: string; light?: boolean }) { return <div className={`section-intro ${light ? "light" : ""}`}><span className="kicker"><i>{index}</i>{eyebrow}</span><h2>{title}</h2>{text && <p>{text}</p>}</div>; }
 
 function DecisionRoomPreview() {
@@ -67,7 +66,7 @@ function DecisionRoomPreview() {
 }
 
 function Home() { const { lang } = useLang(); return <main>
-  <section className="hero-experience"><div className="hero-glow" /><div className="hero-gridline" /><div className="hero-copy"><span className="kicker"><i>00</i>{tr(lang, "Decision Intelligence for Humanity", "Inteligencia de decisiones para la humanidad")}</span><h1>{tr(lang, "Every great decision begins", "Toda gran decisión comienza")} <em>{tr(lang, "with evidence.", "con evidencia.")}</em></h1><p>{tr(lang, "Sagar helps organizations transform complex infrastructure uncertainty into evidence-backed strategic decisions.", "Sagar ayuda a las organizaciones a transformar la incertidumbre compleja de infraestructura en decisiones estratégicas respaldadas por evidencia.")}</p><div className="hero-actions"><a className="button primary" href="/contact" onClick={() => track("hero_start_decision")}>{tr(lang, "Start a Decision", "Iniciar una decisión")} <ArrowRight size={16} /></a><a className="button ghost" href="/how-it-works">{tr(lang, "See How It Works", "Ver cómo funciona")} <ArrowRight size={15} /></a><a className="subtle-cta" href="#decision-room" onClick={() => track("hero_view_demo")}><span className="play-icon"><Play size={11} fill="currentColor" /></span> {tr(lang, "View Demo", "Ver demo")}</a></div><div className="hero-proof"><ShieldCheck size={15} /><span>{tr(lang, "Evidence-led", "Guiado por evidencia")}</span><i /> <span>{tr(lang, "Human judgment", "Juicio humano")}</span><i /> <span>{tr(lang, "Built for high-stakes decisions", "Para decisiones críticas")}</span></div></div><div className="hero-visual"><Orb /></div><div className="scroll-marker"><span>{tr(lang, "Scroll to explore", "Desplázate para explorar")}</span><ArrowDownRight size={14} /></div></section>
+  <section className="hero-experience"><div className="hero-glow" /><div className="hero-gridline" /><div className="hero-copy"><span className="kicker"><i>00</i>{tr(lang, "Sagar Infrastructure Signal", "Sagar Infrastructure Signal")}</span><h1>{tr(lang, "Public signals are not the same as", "Las señales públicas no son lo mismo que")} <em>{tr(lang, "readiness.", "la preparación.")}</em></h1><p>{tr(lang, "Every great decision begins with a clear evidence boundary. We turn public records into a decision boundary: what the evidence supports, what it cannot support and what should happen next.", "Toda gran decisión comienza con un límite claro de evidencia. Convertimos registros públicos en un límite de decisión: qué respalda la evidencia, qué no puede respaldar y qué debe suceder después.")}</p><div className="hero-actions"><a className="button primary" href="/infrastructure-signal" onClick={() => track("hero_view_signal")}>{tr(lang, "Read the Signal", "Leer la señal")} <ArrowRight size={16} /></a><a className="button ghost" href="/contact" onClick={() => track("hero_start_decision")}>{tr(lang, "Bring a Decision", "Tráenos una decisión")} <ArrowRight size={15} /></a><a className="subtle-cta" href="#decision-room" onClick={() => track("hero_view_demo")}><span className="play-icon"><Play size={11} fill="currentColor" /></span> {tr(lang, "View Demo", "Ver demo")}</a></div><div className="hero-proof"><ShieldCheck size={15} /><span>{tr(lang, "CYCLE_013 / public evidence", "CYCLE_013 / evidencia pública")}</span><i /> <span>{tr(lang, "9 sources indexed", "9 fuentes indexadas")}</span><i /> <span>{tr(lang, "Advance eligible: NO", "Elegible para avanzar: NO")}</span></div></div><div className="hero-visual"><SignalHeroGraphic lang={lang} /></div><div className="scroll-marker"><span>{tr(lang, "Scroll to explore", "Desplázate para explorar")}</span><ArrowDownRight size={14} /></div></section>
   <section className="trust-strip"><span>Built for decisions across</span>{industries.map(item => <span key={item}>{item}</span>)}</section>
   <section className="problem-section"><Reveal><SectionIntro index="01" eyebrow={tr(lang, "The problem", "El problema")} title={<>{tr(lang, "Complex decisions fail when critical realities remain", "Las decisiones complejas fallan cuando las realidades críticas permanecen")} <em>{tr(lang, "disconnected.", "desconectadas.")}</em></>} text={tr(lang, "Power, water, permitting, community, environment, capital and execution rarely arrive in one coherent view. Sagar connects them into one decision system.", "La energía, el agua, los permisos, la comunidad, el entorno, el capital y la ejecución rara vez llegan en una visión coherente. Sagar los conecta en un solo sistema de decisión.")} /></Reveal><div className="problem-cloud">{["Power", "Water", "Permitting", "Community", "Environment", "Capital", "Execution", "Security", "Geopolitics", "Supply Chain"].map((item, i) => <div className={`problem-chip pc-${i}`} key={item}><span>{item}</span><i /></div>)}</div></section>
   <section className="thesis-section"><Reveal><SectionIntro index="01" eyebrow="The premise" title={<>The product is not AI.<br /><em>The product is confidence.</em></>} text="The world is full of information. The hard part is knowing what matters, what is missing and what to do next. Sagar Labs turns fragmented reality into a clear path forward." /></Reveal><div className="thesis-rail"><div><span>01</span><b>Evidence</b><p>Know what is true, what is inferred and what remains unknown.</p></div><div><span>02</span><b>Reasoning</b><p>Challenge assumptions and compare the consequences of each path.</p></div><div><span>03</span><b>Transformation</b><p>Move from insight to a decision your organization can act on.</p></div></div></section>
@@ -111,4 +110,40 @@ function UseCases() { const { lang } = useLang(); const cases = lang === "es" ? 
 
 function ClientLogin() { const { lang } = useLang(); return <main className="login-page"><div className="login-card"><BrandMark /><span className="kicker"><i>01</i>{tr(lang, "Client access", "Acceso de clientes")}</span><h1>{tr(lang, "Your decision room is waiting.", "Tu sala de decisiones te espera.")}</h1><p>{tr(lang, "Client workspaces are private and invitation-only. Use the link from your Sagar Labs team.", "Los espacios de clientes son privados y solo funcionan por invitación. Usa el enlace de tu equipo de Sagar Labs.")}</p><button className="button primary" onClick={() => window.location.href = "/contact"}>{tr(lang, "Request access", "Solicitar acceso")} <ArrowRight size={15} /></button><small>{tr(lang, "Client Login placeholder · No credentials are collected on this page.", "Marcador de acceso · Esta página no recopila credenciales.")}</small></div></main>; }
 
-export function Experience({ initialPath = "/" }: { initialPath?: string }) { const [theme, setTheme] = useState<"dark" | "light">("dark"); const [lang, setLang] = useState<Lang>("en"); const path = initialPath.replace(/\/$/, "") || "/"; let page: React.ReactNode = <Home />; if (path === "/how-it-works") page = <HowItWorks />; else if (path === "/decision-intelligence") page = <DecisionIntelligencePage />; else if (path === "/decision-room") page = <DecisionRoomPage />; else if (path === "/scenario-explorer") page = <ScenarioExplorer />; else if (path === "/evidence-explorer") page = <EvidenceExplorer />; else if (path === "/ceo-summary") page = <CEOPage />; else if (path === "/use-cases") page = <UseCases />; else if (path === "/client-login") page = <ClientLogin />; else if (path === "/about") page = <About />; else if (path === "/pricing") page = <Pricing />; else if (path === "/contact") page = <Contact />; return <div className={`experience-shell theme-${theme}`}><LanguageContext.Provider value={{ lang, setLang }}><Header theme={theme} setTheme={setTheme} />{page}<Footer /></LanguageContext.Provider></div>; }
+export function Experience({ initialPath = "/" }: { initialPath?: string }) {
+  const [theme, setTheme] = useState<"dark" | "light">("dark");
+  const [lang, setLangState] = useState<Lang>("en");
+
+  useEffect(() => {
+    const saved = window.localStorage.getItem("sagar-language");
+    // Restore the user's explicit preference after the client hydrates.
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    if (saved === "en" || saved === "es") setLangState(saved);
+  }, []);
+
+  useEffect(() => {
+    document.documentElement.lang = lang;
+  }, [lang]);
+
+  function setLang(value: Lang) {
+    setLangState(value);
+    window.localStorage.setItem("sagar-language", value);
+  }
+
+  const path = initialPath.replace(/\/$/, "") || "/";
+  let page: React.ReactNode = <Home />;
+  if (path === "/how-it-works") page = <HowItWorks />;
+  else if (path === "/infrastructure-signal") page = <InfrastructureSignalPage lang={lang} />;
+  else if (path === "/decision-intelligence") page = <DecisionIntelligencePage />;
+  else if (path === "/decision-room") page = <DecisionRoomPage />;
+  else if (path === "/scenario-explorer") page = <ScenarioExplorer />;
+  else if (path === "/evidence-explorer") page = <EvidenceExplorer />;
+  else if (path === "/ceo-summary") page = <CEOPage />;
+  else if (path === "/use-cases") page = <UseCases />;
+  else if (path === "/client-login") page = <ClientLogin />;
+  else if (path === "/about") page = <About />;
+  else if (path === "/pricing") page = <Pricing />;
+  else if (path === "/contact") page = <Contact />;
+
+  return <div className={`experience-shell theme-${theme}`}><LanguageContext.Provider value={{ lang, setLang }}><Header theme={theme} setTheme={setTheme} />{page}<Footer /></LanguageContext.Provider></div>;
+}

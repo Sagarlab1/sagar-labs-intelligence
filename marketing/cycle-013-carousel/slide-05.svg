@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350" role="img" aria-labelledby="title desc">
+  <title id="title">Dónde se exceden las narrativas</title>
+  <desc id="desc">Una señal pública y la evidencia que cambia una decisión no son lo mismo.</desc>
+  <rect width="1080" height="1350" fill="#071217"/><path d="M72 144H1008M72 1203H1008" stroke="#214146"/>
+  <g font-family="Arial,Helvetica,sans-serif">
+    <text x="72" y="86" fill="#9cf2e4" font-size="19" font-weight="700" letter-spacing="3">SAGAR / SEÑAL DE INFRAESTRUCTURA</text><text x="920" y="86" fill="#6f9290" font-size="16" text-anchor="end" letter-spacing="2">05 / 07</text>
+    <text x="72" y="188" fill="#6f9290" font-size="16" letter-spacing="2">PRUEBA DE EXCESO</text><text x="72" y="340" fill="#f5f8f6" font-size="62" font-weight="700" letter-spacing="-2">Aquí es donde la mayoría</text><text x="72" y="412" fill="#f5f8f6" font-size="62" font-weight="700" letter-spacing="-2">de narrativas se excede.</text>
+    <g transform="translate(72 570)"><rect width="936" height="190" fill="#2a2011" stroke="#f0a15b"/><text x="30" y="53" fill="#f0a15b" font-size="13" font-weight="700" letter-spacing="2">[PUBLIC SIGNAL]</text><text x="30" y="128" fill="#f5f8f6" font-size="42" font-weight="700">PPA + fecha esperada</text></g>
+    <g transform="translate(72 804)"><rect width="936" height="190" fill="#0d2428" stroke="#2c9b8d"/><text x="30" y="53" fill="#9cf2e4" font-size="13" font-weight="700" letter-spacing="2">[UNKNOWN]</text><text x="30" y="128" fill="#f5f8f6" font-size="42" font-weight="700">Entrega firme + energización</text></g>
+    <path d="M540 760V798" stroke="#8ea5a2" stroke-width="3"/><path d="m530 792 10 18 10-18" fill="#8ea5a2"/>
+    <text x="72" y="1082" fill="#b9cbc8" font-size="23">Una expectativa publicada no es un registro de entrega.</text><text x="72" y="1262" fill="#6f9290" font-size="14" letter-spacing="1.6">LÍMITE DE LA AFIRMACIÓN: ANUNCIO ≠ ENTREGA · REVISIÓN HUMANA OBLIGATORIA</text>
+  </g>
+</svg>

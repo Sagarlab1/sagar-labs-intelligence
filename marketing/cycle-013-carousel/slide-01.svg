@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350" role="img" aria-labelledby="title desc">
+  <title id="title">Un titular no es un gate</title>
+  <desc id="desc">Lámina de apertura de Sagar Infrastructure Signal, CYCLE_013.</desc>
+  <rect width="1080" height="1350" fill="#071217"/>
+  <circle cx="920" cy="180" r="240" fill="#12383b" opacity=".52"/><circle cx="920" cy="180" r="132" fill="#246761" opacity=".2"/>
+  <path d="M72 144H1008M72 1203H1008" stroke="#214146"/>
+  <g font-family="Arial,Helvetica,sans-serif">
+    <text x="72" y="86" fill="#9cf2e4" font-size="19" font-weight="700" letter-spacing="3">SAGAR / SEÑAL DE INFRAESTRUCTURA</text><text x="920" y="86" fill="#6f9290" font-size="16" text-anchor="end" letter-spacing="2">01 / 07</text>
+    <text x="72" y="188" fill="#6f9290" font-size="16" letter-spacing="2">CYCLE_013 · REVISIÓN PÚBLICA</text>
+    <text x="72" y="430" fill="#f5f8f6" font-size="90" font-weight="700" letter-spacing="-3">Un titular</text><text x="72" y="528" fill="#f5f8f6" font-size="90" font-weight="700" letter-spacing="-3">no es un gate.</text>
+    <rect x="72" y="590" width="88" height="5" fill="#f0a15b"/>
+    <text x="72" y="680" fill="#b9cbc8" font-size="26">La evidencia pública puede abrir la diligencia.</text><text x="72" y="722" fill="#b9cbc8" font-size="26">No puede cerrar el gate por sí sola.</text>
+    <g transform="translate(72 940)"><rect width="936" height="132" fill="#0e2429" stroke="#2c9b8d"/><text x="26" y="47" fill="#9cf2e4" font-size="13" font-weight="700" letter-spacing="2">LA PREGUNTA</text><text x="26" y="88" fill="#f5f8f6" font-size="24">¿Qué respalda realmente el expediente?</text></g>
+    <text x="72" y="1262" fill="#6f9290" font-size="14" letter-spacing="1.6">[VERIFIED] · REVISIÓN HUMANA OBLIGATORIA · SAGAR LABS</text>
+  </g>
+</svg>

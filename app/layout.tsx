@@ -7,12 +7,12 @@ const mono = Geist_Mono({ variable: "--font-mono", subsets: ["latin"] });
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://sagar-intelligence.com"),
-  title: { default: "Sagar Labs Beta — Decision Intelligence for Humanity", template: "%s — Sagar Labs Beta" },
-  description: "Sagar Labs private beta: transform complex infrastructure uncertainty into evidence-backed strategic decisions.",
+  title: { default: "Sagar Infrastructure Signal — Evidence before readiness", template: "%s — Sagar Labs" },
+  description: "Sagar Labs turns public infrastructure signals into evidence boundaries, decision gates and the next document worth requesting.",
   keywords: ["decision intelligence", "infrastructure decision intelligence", "AI infrastructure", "infrastructure due diligence", "Power-to-Compute", "site decision intelligence", "inteligencia de decisiones", "diligencia de infraestructura"],
   robots: { index: true, follow: true },
-  openGraph: { title: "Sagar Labs Beta — Decision Intelligence for Humanity", description: "Every great decision begins with evidence.", type: "website", images: [{ url: "/og.png", width: 1731, height: 909, alt: "Sagar Labs Beta — Decision Intelligence for Humanity" }] },
-  twitter: { card: "summary_large_image", title: "Sagar Labs Beta — Decision Intelligence for Humanity", description: "Every great decision begins with evidence.", images: ["/og.png"] },
+  openGraph: { title: "Sagar Infrastructure Signal — Evidence before readiness", description: "Public signals are not the same as readiness. See what the evidence supports, what it cannot support and what should happen next.", type: "website", images: [{ url: "/og.png", width: 1731, height: 909, alt: "Sagar Infrastructure Signal — Evidence before readiness" }] },
+  twitter: { card: "summary_large_image", title: "Sagar Infrastructure Signal — Evidence before readiness", description: "Public signals are not the same as readiness.", images: ["/og.png"] },
   icons: { icon: "/favicon.svg", shortcut: "/favicon.svg" },
 };
 

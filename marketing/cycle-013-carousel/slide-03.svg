@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350" role="img" aria-labelledby="title desc">
+  <title id="title">La señal era real. La preparación no estaba demostrada.</title>
+  <desc id="desc">CYCLE_013 separa una señal pública de la evidencia necesaria para avanzar.</desc>
+  <rect width="1080" height="1350" fill="#071217"/><path d="M72 144H1008M72 1203H1008" stroke="#214146"/>
+  <g font-family="Arial,Helvetica,sans-serif">
+    <text x="72" y="86" fill="#9cf2e4" font-size="19" font-weight="700" letter-spacing="3">SAGAR / SEÑAL DE INFRAESTRUCTURA</text><text x="920" y="86" fill="#6f9290" font-size="16" text-anchor="end" letter-spacing="2">03 / 07</text>
+    <text x="72" y="188" fill="#6f9290" font-size="16" letter-spacing="2">LÍMITE ENTRE SEÑAL Y EVIDENCIA</text>
+    <text x="72" y="338" fill="#f5f8f6" font-size="58" font-weight="700" letter-spacing="-2">La señal era real.</text><text x="72" y="410" fill="#f5f8f6" font-size="58" font-weight="700" letter-spacing="-2">La preparación no estaba</text><text x="72" y="477" fill="#f5f8f6" font-size="58" font-weight="700" letter-spacing="-2">demostrada.</text>
+    <g transform="translate(72 570)"><rect width="420" height="420" fill="#13252b" stroke="#f0a15b"/><text x="30" y="57" fill="#f0a15b" font-size="13" font-weight="700" letter-spacing="2">[PUBLIC SIGNAL]</text><text x="30" y="142" fill="#f5f8f6" font-size="30" font-weight="700">Un anuncio</text><text x="30" y="180" fill="#f5f8f6" font-size="30" font-weight="700">corporativo y una</text><text x="30" y="218" fill="#f5f8f6" font-size="30" font-weight="700">cronología</text><text x="30" y="256" fill="#f5f8f6" font-size="30" font-weight="700">regulatoria existen</text><text x="30" y="294" fill="#f5f8f6" font-size="30" font-weight="700">en el expediente.</text><text x="30" y="368" fill="#9fb5b2" font-size="18">Eso es una señal.</text></g>
+    <path d="M516 782H562" stroke="#8ea5a2" stroke-width="3"/><path d="m556 772 18 10-18 10" fill="#8ea5a2"/>
+    <g transform="translate(588 570)"><rect width="420" height="420" fill="#0d2428" stroke="#2c9b8d"/><text x="30" y="57" fill="#9cf2e4" font-size="13" font-weight="700" letter-spacing="2">[VERIFIED]</text><text x="30" y="142" fill="#f5f8f6" font-size="30" font-weight="700">El expediente</text><text x="30" y="180" fill="#f5f8f6" font-size="30" font-weight="700">respalda una</text><text x="30" y="218" fill="#f5f8f6" font-size="30" font-weight="700">solicitud acotada</text><text x="30" y="256" fill="#f5f8f6" font-size="30" font-weight="700">de más evidencia.</text><text x="30" y="368" fill="#9fb5b2" font-size="18">Eso no demuestra preparación.</text></g>
+    <text x="72" y="1104" fill="#b9cbc8" font-size="23">El valor está en el límite entre ambas.</text><text x="72" y="1262" fill="#6f9290" font-size="14" letter-spacing="1.6">SÓLO REVISIÓN DE FUENTES PÚBLICAS · SIN ENVÍOS EXTERNOS</text>
+  </g>
+</svg>
