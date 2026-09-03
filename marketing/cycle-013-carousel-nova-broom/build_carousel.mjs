@@ -129,10 +129,10 @@ await render(3, "LA PRIMERA REVELACIÓN", {
     t(608, 770, "respaldó pedir", 30, C.text, 700),
     t(608, 810, "más evidencia.", 30, C.text, 700),
     t(608, 900, "Eso no demuestra preparación.", 19, C.muted),
-    dialogue(578, 1018, 430, 102, C.cyan, "NOVA", ["Una señal abre la investigación."], 940, 285, "right", 18),
+    dialogue(578, 1018, 430, 102, C.cyan, "NOVA", ["Una señal abre la investigación."], 955, 300, "right", 18),
     t(72, 1262, "LÍMITE VISIBLE · EL DIÁLOGO ES RECURSO NARRATIVO · SIN ENVÍOS EXTERNOS", 14, C.dim, 400, 1.3)
   ].join("")
-}, [{ width: 210, height: 270, left: 800, top: 230, position: "right", opacity: 0.34 }]);
+}, [{ width: 258, height: 322, left: 750, top: 205, position: "right", opacity: 0.56 }]);
 
 await render(4, "EL LIBRO DE GATES", {
   background: [
@@ -151,10 +151,10 @@ await render(4, "EL LIBRO DE GATES", {
     t(102, 857, "IMPLEMENTACIÓN DE RED", 13, C.rose, 700, 2), t(790, 857, "SIN SOPORTE", 13, C.rose, 700, 2),
     t(102, 967, "CALENDARIO", 13, "#f2c979", 700, 2), t(790, 967, "SOPORTE LIMITADO", 13, "#f2c979", 700, 2),
     t(102, 1077, "AGUA", 13, C.rose, 700, 2), t(790, 1077, "SIN SOPORTE", 13, C.rose, 700, 2),
-    dialogue(578, 462, 430, 92, C.amber, "BROOM", ["Aquí faltan bastantes llaves."], 900, 375, "right", 18),
+    dialogue(578, 462, 430, 92, C.amber, "BROOM", ["Aquí faltan bastantes llaves."], 875, 400, "right", 18),
     t(72, 1262, "[UNKNOWN] ES UN ESTADO DE DECISIÓN · REVISIÓN HUMANA OBLIGATORIA", 14, C.dim, 400, 1.1)
   ].join("")
-}, [{ width: 188, height: 240, left: 820, top: 230, position: "left", opacity: 0.42 }]);
+}, [{ width: 248, height: 320, left: 760, top: 195, position: "left", opacity: 0.62 }]);
 
 await render(5, "LA CONFUSIÓN", {
   background: [
@@ -168,10 +168,10 @@ await render(5, "LA CONFUSIÓN", {
     t(102, 730, "PPA + fecha esperada", 42, C.text, 700),
     t(102, 889, "[UNKNOWN]", 13, C.cyan, 700, 2),
     t(102, 964, "Entrega firme + energización", 42, C.text, 700),
-    dialogue(540, 470, 468, 80, C.amber, "BROOM", ["¿La fecha es la llegada?"], 840, 440, "right", 18),
+    dialogue(540, 470, 468, 80, C.amber, "BROOM", ["¿La fecha es la llegada?"], 830, 430, "right", 18),
     t(72, 1262, "LÍMITE DE LA AFIRMACIÓN: ANUNCIO ≠ ENTREGA · REVISIÓN HUMANA OBLIGATORIA", 14, C.dim, 400, 1.2)
   ].join("")
-}, [{ width: 230, height: 300, left: 760, top: 205, position: "attention", opacity: 0.26 }]);
+}, [{ width: 280, height: 350, left: 728, top: 170, position: "attention", opacity: 0.48 }]);
 
 await render(6, "LA DECISIÓN", {
   background: [
@@ -193,7 +193,7 @@ await render(6, "LA DECISIÓN", {
     dialogue(708, 625, 300, 112, C.cyan, "NOVA", ["La decisión responsable", "también puede ser esperar."], 920, 320, "left", 17),
     t(72, 1262, "ELEGIBLE PARA AVANZAR: NO · 0 GATES SATISFECHOS · APROBACIÓN HUMANA OBLIGATORIA", 14, C.dim, 400, 1.2)
   ].join("")
-}, [{ width: 300, height: 390, left: 708, top: 205, position: "right", opacity: 0.3 }]);
+}, [{ width: 308, height: 400, left: 700, top: 180, position: "right", opacity: 0.52 }]);
 
 await render(7, "LA PREGUNTA FINAL", {
   background: [
